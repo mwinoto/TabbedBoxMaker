@@ -1,9 +1,10 @@
 # BoxMaker: A free tool for creating boxes using tabbed construction
 
-_version 0.94 - 5 Jan 2017_
+_version 0.95 - 28 Dec 2019_
 
 Original box maker by Elliot White - http://www.twot.eu/111000/111000.html
 Heavily modified by Paul Hutchison
+Further modifications by Marc Winoto
 
 ## About
  This tool is designed to simplify and speed up process of making practical boxes using a laser cutter (though it can be used with any CNC cutter) to prepare the pieces.
@@ -11,16 +12,17 @@ Heavily modified by Paul Hutchison
  The tool works by generating a drawing of the pieces of the box with the tab and hole size corrected to account for the kerf (width of cut), these pieces are composed of sides, each side being a discreet object, to move a piece in the drawing the edges need to be grouped together.
 
 ## Release Notes
- So far no serious bugs( i.e causing runtime errors ) have been found. The program works with python versions 2.6.5, 2.6.7 and 2.7.2, other version have not yet been tried except python 2.5.1 which fails with a syntax error.
+ This updates Tabbed Boxed Maker to work with InkScape 1.0 beta. Only Tabbed Boxed Maker on Mac OS X has been tested.
 
-This version has been tried on windows XP, windows 7, Ubuntu and Mac OS X with no serious problems ( the live preview works most of the time but can be flaky).
+ I hope to make further updates, but progress is slow because the code could IMHO, be clearer.
 
- Only crude input checking has been implemented in the program but as the only output is a drawing the worst that can happen is a messed up picture ( control-Z cures that problem ).
- 
-## Donate
- Any donations will be gratefully received and help me spend more time on laser cutter tools like this:
+ The input checking is still crude.
 
- [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/SparkItUp)
+## Changes in the InkScape 1.0 Beta version:
+* Some code clean up.
+* The "one side open" option now adjusts the height of the walls so that the dimensions of the final result are as entered.
+* The "one side open" option also does not generate the lid anymore.
+* Schroff has been completely neglected because I don't need it.
 
 ## To do
 * Tidy the code - it is rough and unpythonic.  Needs some work by a master Python guru.
@@ -122,3 +124,4 @@ version | Date | Notes
 0.93 | (21 Sept 2015) | Updated versioning to match original author's updated v0.91 plus adding my 0.02 
 0.93a | (21 Sept 2015) | Added hairline line thickness option for Epilog lasers
 0.94 | (4 Jan 2017) | Divider keying options
+0.95 | (28 Dec 2019) | Updated to work with InkScape 1.0 Beta and imporovements to "one side open"
